@@ -36,9 +36,10 @@ app.post("/addresponse",(req,res)=>{
         res.status(400).end();
     })
 })
-app.get("/hello",(req,res)=>{
-    res.end("hello");
+app.get("/",(req,res)=>{
+    res.send("hello");
 })
+
 app.get("/getresponse",async (req,res)=>{
     try{
         let responses = [];
