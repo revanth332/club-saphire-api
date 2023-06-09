@@ -1,4 +1,4 @@
-require('./node_modules/dotenv/config')
+// require('./node_modules/dotenv/config')
 const express = require('express');
 const app = express()
 const cors = require('cors');
@@ -8,9 +8,9 @@ const csvParser = require("json2csv").parse;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cors({
-    origin:["http://127.0.0.1:5500/Club%20Sapphire/feedback.html",process.env.FRONTEND_URL]
-}))
+// app.use(cors({
+//     origin:["http://127.0.0.1:5500/Club%20Sapphire/feedback.html",process.env.FRONTEND_URL]
+// }))
 
 app.post("/addresponse",(req,res)=>{
     const responseData = {
